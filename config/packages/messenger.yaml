@@ -1,0 +1,19 @@
+framework:
+    messenger:
+        default_bus: messenger.bus.queries
+        buses:
+            messenger.bus.commands:
+                middleware:
+                    - validation
+                    - doctrine_transaction
+            messenger.bus.queries:
+                middleware:
+                    - validation
+
+        transports:
+            # Uncomment the following line to enable a transport named "amqp"
+            # amqp: '%env(MESSENGER_TRANSPORT_DSN)%'
+
+        routing:
+            # Route your messages to the transports
+            # 'App\Message\YourMessage': amqp
