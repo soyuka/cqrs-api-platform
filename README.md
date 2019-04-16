@@ -60,6 +60,7 @@ In `validator.xml ` for now:
 - support write through commands
 - transform validator listeners as middlewares
 - Maybe even remove the Serialize/Deserialize Listeners?
+- For graphql there could be a Query and a Mutation bus
 - do a compiler pass to remove api platform listeners
 - transform into a bundle
 - share
